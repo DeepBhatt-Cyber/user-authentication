@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { set } from "mongoose";
+import OAuth from "../components/OAuth";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
@@ -70,6 +71,7 @@ export default function SignUp() {
         <button disabled={loading} className="bg-gray-600 text-white p-3 rounded-lg uppercase hover:opacity-80 disabled:opacity-20">
           {loading ? "Loading..." : "Sign Up"}
         </button>
+        <OAuth />
       </form>
       <div className="mt-3">
         <p>
